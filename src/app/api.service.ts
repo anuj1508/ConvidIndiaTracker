@@ -67,7 +67,7 @@ export class ApiService {
       for (i = 1; i < this.stateDataResult.statewise.length; i++) {
       var dists : DistrictDataModel[] = [];
       var stat: StateDataModel;
-      stat = {active:'', recovered:'', deaths:'', confirmed:'', districtData:[], state:''};
+      stat = {active:'', recovered:'', deaths:'', confirmed:'', districtData:[], state:'', lastupdatedtime: new Date()};
       if(result[this.stateDataResult.statewise[i].state]!=undefined && result[this.stateDataResult.statewise[i].state]!= null)
       {
         result[this.stateDataResult.statewise[i].state].forEach(element => {
@@ -87,9 +87,11 @@ export class ApiService {
       stat.districtData = dists;
       stat.recovered = this.stateDataResult.statewise[i].recovered
       stat.state = this.stateDataResult.statewise[i].state;
+      stat.lastupdatedtime = this.stateDataResult.statewise[i].lastupdatedtime;
       states1.push(stat);
       }
-      countryData = {statesData:states1,active:this.stateDataResult.statewise[0].active, confirmed:this.stateDataResult.statewise[0].confirmed, deaths:this.stateDataResult.statewise[0].deaths, recovered:this.stateDataResult.statewise[0].recovered}
+      countryData = {statesData:states1,active:this.stateDataResult.statewise[0].active, confirmed:this.stateDataResult.statewise[0].confirmed, deaths:this.stateDataResult.statewise[0].deaths, recovered:this.stateDataResult.statewise[0].recovered, lastupdatedtime:this.stateDataResult.statewise[0].lastupdatedtime};
+      console.log(countryData);
       this.finalResult = countryData;
       obs.next(this.finalResult);
       });

@@ -39,57 +39,57 @@ export class TableStatsComponent implements OnInit {
 }
 
 
-const stateData : StateDataModel[]=[
-		{
-			active: "6229",
-			confirmed: "7628",
-			deaths: "323",
-			recovered: "1076",
-      state: "Maharashtra",
-      districtData:[]
-    },
-    {
-			active: "2656",
-			confirmed: "3071",
-			deaths: "133",
-			recovered: "282",
-      state: "Gujarat",
-      districtData:[]
-		},
-];
+// const stateData : StateDataModel[]=[
+// 		{
+// 			active: "6229",
+// 			confirmed: "7628",
+// 			deaths: "323",
+// 			recovered: "1076",
+//       state: "Maharashtra",
+//       districtData:[]
+//     },
+//     {
+// 			active: "2656",
+// 			confirmed: "3071",
+// 			deaths: "133",
+// 			recovered: "282",
+//       state: "Gujarat",
+//       districtData:[]
+// 		},
+// ];
 
-const sampleData : StateDataModel[] = 
-  [{
-    active: "6538",
-    recovered: "1188",
-    deaths: "342",
-    confirmed: "8068",
-    districtData: [{
-      active: "0",
-      confirmed: "1",
-      deaths: "0",
-      district: "Sindhudurg",
-      recovered: "1"
-    }, {
-      active: "42",
-      confirmed:"47" ,
-      deaths: "5",
-      district: "Solapur",
-      recovered: "0"
-    }],
-    state: "Maharashtra"
-  }, {
-    active: "2837",
-    recovered: "313",
-    deaths: "151",
-    confirmed: "3301",
-    districtData: [{
-      active: "4",
-      confirmed: "5",
-      deaths: "1",
-      district: "Valsad",
-      recovered: "0"
-    }],
-    state: "Gujarat"
-  }
-]
+// const sampleData : StateDataModel[] = 
+//   [{
+//     active: "6538",
+//     recovered: "1188",
+//     deaths: "342",
+//     confirmed: "8068",
+//     districtData: [{
+//       active: "0",
+//       confirmed: "1",
+//       deaths: "0",
+//       district: "Sindhudurg",
+//       recovered: "1"
+//     }, {
+//       active: "42",
+//       confirmed:"47" ,
+//       deaths: "5",
+//       district: "Solapur",
+//       recovered: "0"
+//     }],
+//     state: "Maharashtra"
+//   }, {
+//     active: "2837",
+//     recovered: "313",
+//     deaths: "151",
+//     confirmed: "3301",
+//     districtData: [{
+//       active: "4",
+//       confirmed: "5",
+//       deaths: "1",
+//       district: "Valsad",
+//       recovered: "0"
+//     }],
+//     state: "Gujarat"
+//   }
+// ]

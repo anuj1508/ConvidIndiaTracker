@@ -21,7 +21,7 @@ export class CountryDataComponent implements OnInit {
 
   date:string;
 
-  Data:CountryDataModel={active:'', recovered:'', deaths:'', confirmed:'', statesData:[]};
+  Data:CountryDataModel={active:'', recovered:'', deaths:'', confirmed:'', statesData:[], lastupdatedtime:new Date()};
 
   statesData: StateDataModel[] = [];
   constructor(private apiService: ApiService) { }
@@ -33,7 +33,7 @@ export class CountryDataComponent implements OnInit {
   getStats(){
     this.apiService.getStats().subscribe(data=>{
         this.dataSource=data;
-        var today = new Date();
+        var today = new Date(this.dataSource.lastupdatedtime);
         this.date = today.toString();
         //this.statesData = this.dataSource;
      });

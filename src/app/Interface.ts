@@ -7,6 +7,7 @@ export interface StateDataModel {
     recovered: string;
     state: string;
     districtData: DistrictDataModel[] | MatTableDataSource<DistrictDataModel>;
+    lastupdatedtime:Date;
   }
 
 
@@ -24,6 +25,7 @@ export interface StateDataModel {
     deaths: string;
     recovered: string;  
     statesData: StateDataModel[];
+    lastupdatedtime: Date;
   }
 
   export interface NewsModel {
