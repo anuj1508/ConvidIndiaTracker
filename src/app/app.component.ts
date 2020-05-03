@@ -10,12 +10,12 @@ export class AppComponent implements OnInit {
   title = 'CovidIndia-Tracker';
 
     news: NewsModel[] = [{
-      title: "title1",
-      description: "decription1"
+      title: "Coronavirus Update 1",
+      description: "4 recoveries in Punjab"
     },
     {
-      title: "title1",
-      description: "decription1"
+      title: "Coronavirus Update 2",
+      description: "29 new cases in Rajasthan, 1 new case in Ladakh"
    
     }]
    

@@ -1,4 +1,17 @@
 <div>
-<h1>Total Cofirmed : {{dataSource.confirmed}} || Active Cases: {{dataSource.active}} || Recovered: {{dataSource.recovered}} || Deceased : {{dataSource.deaths}}</h1>
+<mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Total Confirmed : {{dataSource.confirmed}}</mat-card-title>
+      <mat-card-subtitle>As on {{date}}</mat-card-subtitle>
+    </mat-card-header>        
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item> Active Cases: {{dataSource.active}} </mat-list-item>
+            <mat-list-item> Recovered: {{dataSource.recovered}} </mat-list-item>
+            <mat-list-item> Deceased : {{dataSource.deaths}} </mat-list-item>
+           </mat-list>
+    </mat-card-content>        
+  </mat-card>
 <app-table-stats [statesData]="dataSource.statesData"></app-table-stats>
 </div>

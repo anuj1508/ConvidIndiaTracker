@@ -29,7 +29,7 @@ export class AdminLoginComponent implements OnInit {
   });
  
   onSubmit(){
-    if(this.loginForm.get('username').value=='admin' && this.loginForm.get('password').value=='admin'){
+    if(this.loginForm.get('username').value=='admin' && this.loginForm.get('password').value=='admin1234'){
         localStorage.setItem('login','true');
         this.router.navigate(['admin/dashboard']);
     }

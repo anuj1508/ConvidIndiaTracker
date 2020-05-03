@@ -3,6 +3,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { NewsModel } from 'src/app/Interface';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class AdminDashboardComponent implements OnInit {
   
   newsDetailsArray: NewsModel[] = [];
   
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router,private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.createForm();
@@ -36,18 +37,15 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.newsForm)
     this.newsDetail.title = this.newsForm.get('newsTitle').value;
     this.newsDetail.description = this.newsForm.get('newsDescription').value;
-    console.log(this.newsDetail);
-    console.log(this.newsDetailsArray);
     this.newsDetailsArray.push(this.newsDetail);
-    //console.log(this.newsArray);
     localStorage.setItem('newsDetails',JSON.stringify(this.newsDetailsArray));
     this.newsForm.reset();
     this.newsForm.markAsUntouched();
-    console.log("local"+ localStorage.getItem('newsDetails'));
-   
+    this._snackBar.open("News Updated!",null ,{
+      duration: 2000,
+    });   
   }
 
   logout(){
