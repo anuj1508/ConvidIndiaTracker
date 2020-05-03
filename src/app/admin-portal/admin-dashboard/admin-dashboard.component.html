@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">
+  <span>Admin Portal : Add news here </span>
+ <div class="pointer" style="margin-left: 700px;" (click)="logout()">
+  <span style="margin-right: 10px;" class="material-icons">
+      input
+      </span>Logout</div>
+</mat-toolbar>
+
+<br>
+
+<mat-card>
+  <mat-card-content>
+<form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+<div class="example-container">
+  <mat-form-field appearance="fill">
+   
+    <input matInput  placeholder="Title" formControlName="newsTitle">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    
+    <textarea matInput placeholder="description" formControlName="newsDescription"></textarea>
+    
+  </mat-form-field>
+  <label *ngIf="!newsForm.get('newsDescription').valid && newsForm.get('newsDescription').touched">
+      Required field, must be more thn 5 characters.
+    </label>
+</div>
+
+<button mat-raised-button color="primary" type="submit" class="button"  [disabled]="!newsForm.valid">Submit Form</button>
+</form>
+
+</mat-card-content>
+</mat-card>
+
+<div style="overflow: auto; max-height: 400px; background: blue">
+    <div *ngFor="let news of newsDetailsArray">
+        <mat-card>
+            <mat-card-title>
+                {{news.title}}
+            </mat-card-title>
+            <mat-card-content>
+                {{news.description}}
+            </mat-card-content>
+        </mat-card>
+        </div>
+    </div>
+
+
+

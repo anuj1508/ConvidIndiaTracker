@@ -1,0 +1,16 @@
+<div style="display: flex; flex-wrap: wrap;">
+<div *ngFor="let news of newsArray" style="flex-basis: 33.33%; margin: 10px;">
+<mat-card class="example-card">
+  <mat-card-header>
+    <!-- <div mat-card-avatar [ngStyle]="{'background-image': 'url(../assets/images/'+ article.source.id +'.png)'}" class="example-header-image"></div> -->
+    <mat-card-title class="title">{{news.title}}</mat-card-title>
+  </mat-card-header>
+  <!-- <img mat-card-image class="img-article" src={{article.urlToImage}} alt=""> -->
+  <mat-card-content>
+    <p>
+      {{news.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+</div>
+</div>

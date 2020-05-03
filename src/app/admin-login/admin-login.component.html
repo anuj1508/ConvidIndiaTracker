@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">Admin Login</span>
+  </mat-toolbar>
+ 
+<br>
+<div class="main-div">
+<mat-card style="width: 300px;">
+    <mat-card-content>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your Username</mat-label>
+      <input matInput  formControlName="username">
+     
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="'password'" formControlName="password">
+      </mat-form-field>
+  </div>
+ 
+  <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!loginForm.valid">Login</button>
+  </form>
+  
+  </mat-card-content>
+  </mat-card>
+  </div>
